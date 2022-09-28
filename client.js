@@ -13,9 +13,31 @@ const connect = function () {
   conn.on("connect", () => {
     conn.write("Name: NDH");
   });
-  setTimeout(() => {
-    console.log('you ded cuz you idled');
-  }, 7000);
-  return conn;
-  }
+}
+  // conn.on("connect", () => {
+  //   conn.write("Move: up");
+  // });
+  // conn.on("connect", () => {
+  //   conn.write("Move: right");
+  // });
+  // conn.on("connect", () => {
+  //   conn.write("Move: right");
+  // });
+  // conn.on("connect", () => {
+  //   conn.write("Move: up");
+  // });
+  // conn.on("connect", () => {
+  //   conn.write("Move: up");
+  // });
+  // conn.on("connect", () => {
+  //   conn.write("Move: right");
+  // });
+  // conn.on("connect", () => {
+  //   conn.write("Move: up");
+  // });
+  // conn.on("connect", () => {
+  //   conn.write("Move: up");
+  // });
+
+  
 module.exports = {connect};
