@@ -8,10 +8,14 @@ const connect = function () {
   // interpret incoming data as text
   conn.setEncoding("utf8");
   conn.on("connect", () => { 
-    setTimeout(() => {
+    console.log("Yay!!! Successfully connected to game server!");
+  });
+  conn.on("connect", () => {
+    conn.write("Name: NDH");
+  });
+  setTimeout(() => {
     console.log('you ded cuz you idled');
-  }, 5000);
+  }, 7000);
   return conn;
-  })
-}
+  }
 module.exports = {connect};
