@@ -1,8 +1,8 @@
-const input = require("./input");
-
+const {setupInput} = require("./input");
+const { connect } = require("./client");
 // establishes a connection with the game server
 
 console.log("Connecting ...");
 
-input.setupInput();
+setupInput(connect());
 

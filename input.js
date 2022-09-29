@@ -1,6 +1,6 @@
-const client = require("./client")
-let connection = client.connect();
-const setupInput = function () {
+let connection; 
+const setupInput = (conn) => {
+  connection = conn;
   const stdin = process.stdin;
   stdin.setRawMode(true);
   stdin.setEncoding("utf8");
@@ -25,7 +25,6 @@ const handleUserInput = function (key) {
   if (key === "d") {     
     connection.write("Move: right");   
   };
-console.log(key);
 };
 
 module.exports = {setupInput}; 
